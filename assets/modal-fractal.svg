@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="960" viewBox="0 0 960 960">
+  <defs>
+    <radialGradient id="lime">
+      <stop stop-color="#E6EDD7" stop-opacity=".75"/>
+      <stop offset=".48" stop-color="#7BBE11" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#E6EDD7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mint">
+      <stop stop-color="#E6EDD7" stop-opacity=".65"/>
+      <stop offset="1" stop-color="#E6EDD7" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="fractal" x="-25%" y="-25%" width="150%" height="150%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".009 .013" numOctaves="4" seed="23" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="210" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+  </defs>
+  <g filter="url(#fractal)">
+    <ellipse cx="220" cy="180" rx="460" ry="320" fill="url(#lime)"/>
+    <ellipse cx="760" cy="660" rx="390" ry="510" fill="url(#mint)"/>
+    <ellipse cx="100" cy="900" rx="340" ry="290" fill="url(#lime)"/>
+  </g>
+</svg>

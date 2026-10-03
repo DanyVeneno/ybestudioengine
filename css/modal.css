@@ -1,0 +1,53 @@
+/* Translucent glass with a softly blurred fractal texture. */
+.modal {
+  background: rgba(25, 32, 38, .48);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.modal-card {
+  background-color: rgba(230, 237, 215, .86);
+  color: var(--brand-dark);
+  color-scheme: light;
+  background-image: url('../assets/modal-fractal.svg');
+  background-position: center;
+  background-size: cover;
+  border-color: rgba(230, 237, 215, .65);
+  -webkit-backdrop-filter: blur(18px) saturate(125%);
+  backdrop-filter: blur(18px) saturate(125%);
+  box-shadow:
+    0 28px 90px rgba(25, 32, 38, .4),
+    0 0 40px rgba(230, 237, 215, .12),
+    inset 0 1px 0 rgba(230, 237, 215, .8);
+}
+
+.modal-card p,
+.modal-card li {
+  color: #374237;
+}
+
+.modal-card .eyebrow {
+  color: #4b760b;
+}
+
+.modal-card .tag {
+  background: rgba(230, 237, 215, .5);
+  border-color: rgba(25, 32, 38, .22);
+  color: var(--brand-dark);
+}
+
+.modal-card .resource-link { color: #4b760b; }
+.modal-close { color: var(--brand-dark); }
+.modal-card a:focus-visible,
+.modal-close:focus-visible { outline-color: #4b760b; }
+
+.modal-close:hover,
+.modal-close:focus-visible {
+  color: #4b760b;
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .modal-card {
+    background-color: #E6EDD7;
+  }
+}

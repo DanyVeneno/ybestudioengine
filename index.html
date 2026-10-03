@@ -8,8 +8,11 @@
       content="YEHIIBHII Experience Engine V5 — diagnóstico, conocimiento y ruta de transformación digital."
     />
     <title>YEHIIBHII Experience Engine V5</title>
+    <script src="js/theme.js"></script>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/modal.css" />
   </head>
   <body>
     <header class="site-header">
@@ -23,6 +26,10 @@
         <button data-nav="results" id="resultNav" disabled>Resultado</button>
       </nav>
       <div class="version">V5 · INTEGRATED TESTING</div>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Activar modo claro" aria-pressed="true">
+        <span data-theme-icon aria-hidden="true">☾</span>
+        <span data-theme-label>Oscuro</span>
+      </button>
     </header>
     <main id="app">
       <section class="view active hero" id="home">
