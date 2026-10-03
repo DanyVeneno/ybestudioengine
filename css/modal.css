@@ -6,7 +6,7 @@
 }
 
 .modal-card {
-  background-color: rgba(230, 237, 215, .86);
+  background-color: rgba(230, 237, 215, .75);
   color: var(--brand-dark);
   color-scheme: light;
   background-image: url('../assets/modal-fractal.svg');
@@ -48,6 +48,6 @@
 
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
   .modal-card {
-    background-color: #E6EDD7;
+    background-color: rgba(230, 237, 215, .75);
   }
 }
