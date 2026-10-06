@@ -1,0 +1,59 @@
+[
+  {
+    "id": "360-diagnostik", "title": "360 DIAGNOSTIK", "url": "https://360diagnostik.netlify.app/",
+    "description": "Catálogo de 29 herramientas de análisis para consultar qué estudian, dónde se utilizan y para qué sirven.",
+    "purpose": "Elegir herramientas de diagnóstico según el área y el problema que quieres comprender.",
+    "when": "Al preparar un diagnóstico de empresa o buscar un método de análisis para un reto específico.",
+    "actions": ["Define el área o problema que quieres analizar", "Busca por nombre o filtra por área", "Consulta las fichas y adapta el método al contexto de tu empresa"],
+    "tags": ["Diagnóstico", "Análisis", "Consulta"]
+  },
+  {
+    "id": "foda", "title": "ANÁLISIS FODA", "url": "https://analisisfodak.netlify.app/",
+    "description": "Guía y matriz interactiva para identificar fortalezas, oportunidades, debilidades y amenazas, y convertirlas en líneas de acción.",
+    "purpose": "Ordenar la situación interna y externa del negocio antes de definir una estrategia.",
+    "when": "Al revisar prioridades, planear un proyecto o poner en común la perspectiva de distintas áreas.",
+    "actions": ["Recopila información de las áreas relevantes", "Completa los cuatro cuadrantes de la matriz", "Cruza los hallazgos para definir estrategias FO, FA, DO y DA"],
+    "tags": ["Estrategia", "FODA", "Planificación"]
+  },
+  {
+    "id": "productividad", "title": "PRODUCTIVIDAD", "url": "https://productividadyb.netlify.app/",
+    "description": "Manual práctico con ejercicios de prioridades, objetivos, metas SMART y actividades de alta rentabilidad.",
+    "purpose": "Conectar tus objetivos con acciones medibles y revisar cómo distribuyes tu tiempo.",
+    "when": "Cuando necesitas enfocar el trabajo, revisar hábitos o convertir un objetivo en un ciclo de actividades.",
+    "actions": ["Revisa tus prioridades y hábitos", "Define objetivos y metas SMART", "Identifica actividades de alta rentabilidad, obstáculos y soluciones"],
+    "tags": ["Productividad", "Metas SMART", "Gestión del tiempo"]
+  },
+  {
+    "id": "fuerza-dkar", "title": "FUERZA DKAR", "url": "https://fuerzadkar.netlify.app/",
+    "description": "Guía para instructores que diseñan un curso de gestión del cambio con las cinco fases del modelo ADKAR: conciencia, deseo, conocimiento, habilidad y refuerzo.",
+    "purpose": "Preparar la formación y el acompañamiento de las personas durante un cambio organizacional.",
+    "when": "Al introducir nuevas herramientas, procesos o formas de trabajo que requieren participación y aprendizaje del equipo.",
+    "actions": ["Explica la necesidad del cambio y los beneficios para el equipo", "Prepara capacitación y oportunidades de práctica", "Define cómo medir la adopción y reforzar el cambio"],
+    "tags": ["ADKAR", "Gestión del cambio", "Formación"]
+  },
+  {
+    "id": "atlas-de-valor", "title": "ATLAS DE VALOR", "url": "https://atlasdevaloyb.netlify.app/",
+    "description": "Espacio de aprendizaje y consulta sobre marca, valor y experiencia, organizado en módulos, lecciones y actividades.",
+    "purpose": "Revisar la relación entre el modelo de negocio, el valor que ofreces y la experiencia de tus clientes.",
+    "when": "Al estudiar tu propuesta de valor o preparar una revisión de marca y experiencia.",
+    "actions": ["Explora el panorama y los módulos de aprendizaje", "Revisa el modelo de negocio y los criterios de revisión", "Sigue la ruta de aplicación y realiza las actividades"],
+    "tags": ["Marca", "Valor", "Experiencia"]
+  },
+  {
+    "id": "mejora-ventas", "title": "MEJORA VENTAS", "url": "https://impulso-mejora-ventas.yehiibhii.chatgpt.site/",
+    "description": "Acceso a Impulso · Mejora continua en ventas.",
+    "purpose": "Explorar el espacio dedicado a la mejora continua de ventas.",
+    "when": "Cuando quieres revisar iniciativas de mejora comercial.",
+    "actions": ["Ten a mano el objetivo comercial que quieres trabajar", "Inicia sesión con ChatGPT para acceder", "Revisa las opciones disponibles dentro de la herramienta"],
+    "tags": ["Ventas", "Mejora continua"],
+    "accessNote": "Este sitio requiere iniciar sesión con ChatGPT."
+  },
+  {
+    "id": "impulso-v2", "title": "IMPULSO V2", "url": "https://impulsov2.netlify.app/",
+    "description": "Laboratorio comercial de mejora continua que conecta ventas y experiencia del cliente, con recorrido del cliente, diagnóstico y piloto de mejora.",
+    "purpose": "Revisar la relación entre lo que prometes al cliente y lo que entregas para orientar una mejora comercial.",
+    "when": "Al analizar el recorrido del cliente o preparar un piloto de mejora con el equipo de ventas.",
+    "actions": ["Explora el recorrido del cliente", "Inicia el diagnóstico comercial", "Prepara un piloto de mejora y revisa el trabajo del equipo"],
+    "tags": ["Ventas", "CX", "Mejora continua"]
+  }
+]

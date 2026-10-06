@@ -1,4 +1,17 @@
 /* Translucent glass with a softly blurred fractal texture. */
+body.modal-open { overflow: hidden; }
+
+.modal-card .actions { margin-top: 24px; }
+.modal-card .primary { white-space: normal; text-align: center; }
+.modal-card h3 { padding-right: 24px; overflow-wrap: anywhere; }
+
+@media (max-width: 580px) {
+  .modal { padding: 12px; }
+  .modal-card { padding: 28px 20px; max-height: 86dvh; }
+  .modal-card h3 { font-size: 25px; }
+  .modal-card .actions .primary { width: 100%; }
+}
+
 .modal {
   background: rgba(25, 32, 38, .48);
   -webkit-backdrop-filter: blur(5px);

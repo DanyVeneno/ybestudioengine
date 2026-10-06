@@ -1,1 +1,22 @@
-(function(){var tools=[['360 DIAGNOSTIK','https://360diagnostik.netlify.app/'],['AN\u00c1LISIS FODA','https://analisisfodak.netlify.app/'],['PRODUCTIVIDAD','https://productividadyb.netlify.app/'],['FUERZA DKAR','https://fuerzadkar.netlify.app/'],['ATLAS DE VALOR','https://atlasdevaloyb.netlify.app/'],['MEJORA VENTAS','https://impulso-mejora-ventas.yehiibhii.chatgpt.site/'],['IMPULSO V2','https://impulsov2.netlify.app/']];var orbit=document.getElementById('orbit');if(!orbit)return;orbit.classList.add('orbit-expanded');orbit.querySelectorAll('.tool-node').forEach(function(node){node.remove();});tools.forEach(function(tool,i){var angle=-Math.PI/2+i*2*Math.PI/tools.length;var link=document.createElement('a');link.className='node tool-node';link.style.left=(50+47*Math.cos(angle))+'%';link.style.top=(50+47*Math.sin(angle))+'%';link.href=tool[1];link.textContent=tool[0];link.target='_blank';link.rel='noopener noreferrer';link.setAttribute('aria-label',tool[0]+' (abre en una pesta\u00f1a nueva)');orbit.appendChild(link);});document.querySelector('.orbit-note').textContent='8 dimensiones + 7 herramientas \u00b7 un solo ecosistema';})();
+export function setupTools(tools, onOpen) {
+  const orbit = document.getElementById('orbit');
+  if (!orbit) return;
+  orbit.classList.add('orbit-expanded');
+  orbit.querySelectorAll('.tool-node').forEach(node => node.remove());
+  tools.forEach((tool, i) => {
+    const angle = -Math.PI / 2 + i * 2 * Math.PI / tools.length;
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'node tool-node';
+    button.style.left = (50 + 47 * Math.cos(angle)) + '%';
+    button.style.top = (50 + 47 * Math.sin(angle)) + '%';
+    button.dataset.tool = tool.id;
+    button.textContent = tool.title;
+    button.setAttribute('aria-label', tool.title + ': ver información');
+    button.setAttribute('aria-haspopup', 'dialog');
+    button.setAttribute('aria-controls', 'modal');
+    button.onclick = () => onOpen(tool);
+    orbit.appendChild(button);
+  });
+  document.querySelector('.orbit-note').textContent = `8 dimensiones + ${tools.length} herramientas · un solo ecosistema`;
+}

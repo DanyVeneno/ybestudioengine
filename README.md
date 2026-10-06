@@ -13,6 +13,7 @@ V5 consolida y corrige la arquitectura V4. No es un micrositio independiente: es
 - Knowledge Engine.
 - Roadmap dinámico.
 - Ecosistema de 8 capacidades con modales.
+- 7 herramientas orbitales con fichas en el mismo modal y acceso al sitio desde “Abrir herramienta”. El contenido se mantiene en `data/tools.json`.
 - Recursos relacionados.
 - CTA contextual a WhatsApp.
 - Sistema orbital animado y microanimaciones discretas.
