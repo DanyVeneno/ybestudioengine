@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/theme.css" />
     <link rel="stylesheet" href="css/modal.css" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    
     <link rel="icon" type="image/png" href="assets/favicon-96x96.png" />
   </head>
   <body>
@@ -203,11 +203,11 @@
               <i id="progress"></i>
             </div>
             <div id="questionCard" class="question-card">
-              <h2 id="questionText"></h2>
+              <h2 id="questionText" aria-live="polite"></h2>
               <p class="hint">
                 Selecciona el nivel que mejor representa tu organización.
               </p>
-              <div id="answers" class="answers"></div>
+              <div id="answers" class="answers" role="group" aria-label="Nivel de madurez"></div>
             </div>
             <div class="question-nav">
               <button class="secondary" id="back">← Anterior</button>
@@ -228,7 +228,7 @@
               <span id="score">0</span>
               <small>/100</small>
             </div>
-            <h3 id="maturity"></h3>
+            <p id="trafficStatus" class="traffic-status" role="status"></p><h3 id="maturity"></h3>
             <p id="maturityDesc"></p>
           </article>
           <article>
@@ -236,13 +236,13 @@
             <div id="bars" class="bars"></div>
           </article>
         </div>
-        <div class="result-grid">
+        <p id="tieNote" class="method-note"></p><div class="result-grid">
           <article>
-            <p class="eyebrow">FORTALEZAS</p>
+            <p class="eyebrow">MAYORES PUNTUACIONES</p>
             <div id="strengths"></div>
           </article>
           <article>
-            <p class="eyebrow">BRECHAS PRINCIPALES</p>
+            <p class="eyebrow">CAPACIDADES A REFORZAR</p>
             <div id="gaps"></div>
           </article>
           <article>
@@ -272,7 +272,7 @@
           </div>
           <div id="roadmap" class="roadmap"></div>
         </div>
-        <div class="cta">
+        <section class="report-actions" aria-label="Reporte del diagnóstico"><h2>Tu reporte</h2><p>Autoevaluación orientativa. Puedes revisar el reporte, guardarlo como PDF desde imprimir o descargar sus datos.</p><div class="actions"><button class="secondary" id="previewReport" aria-expanded="false" aria-controls="reportPreview">Ver reporte</button><button class="secondary" id="printReport">Imprimir / guardar PDF</button><button class="secondary" id="exportReport">Descargar datos JSON</button></div></section><section id="reportPreview" hidden aria-label="Reporte detallado"></section><div class="cta">
           <div>
             <p class="eyebrow">SIGUIENTE PASO</p>
             <h2>Convierte el diagnóstico en un plan.</h2>
@@ -312,6 +312,6 @@
       YEHIIBHII ESTUDIO · Entender → Diagnosticar → Priorizar → Conectar →
       Actuar
     </footer>
-    <script type="module" src="js/app.js"></script>
+    <link rel="stylesheet" href="css/revision.css"><link rel="stylesheet" href="css/report.css"><script type="module" src="js/app.js"></script>
   </body>
 </html>

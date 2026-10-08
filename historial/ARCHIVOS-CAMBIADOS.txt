@@ -1,0 +1,10 @@
+comparacion-publicada.json
+DIAGNOSTICO-Y-COMPARACION.md
+index.html
+tests/regression.cjs
+css/revision.css
+css/theme.css
+css/modal.css
+js/navigation.js
+js/assessment.js
+js/app.js

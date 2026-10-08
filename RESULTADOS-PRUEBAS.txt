@@ -1,0 +1,9 @@
+PASS: editar respuesta actualiza resultado y estado persistido sin finalizar
+PASS: diagnóstico incompleto invalida resultado
+PASS: valores fuera de niveles no generan resultado
+PASS: cancelar conserva respuestas; confirmar reinicia y deshabilita resultado
+PASS: recorrido completo 40 preguntas al nivel 25
+PASS: recorrido completo 40 preguntas al nivel 50
+PASS: recorrido completo 40 preguntas al nivel 75
+PASS: recorrido completo 40 preguntas al nivel 100
+PASS: reporte estructurado con 40 respuestas y 8 dimensiones

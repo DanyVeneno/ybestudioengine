@@ -1,0 +1,174 @@
+[
+  {
+    "file": "README.md",
+    "status": "not_public_reference"
+  },
+  {
+    "file": "index.html",
+    "status": 200,
+    "same_as_local": true,
+    "sha256": "d77a753c4d4d1572e84456e9026244ea53eb2bba84d45c27a3dea368b3037d91"
+  },
+  {
+    "file": "assets/web-app-manifest-512x512.png",
+    "status": 200,
+    "same_as_local": true,
+    "sha256": "4f11c9f197c0157b7e37db04c9cd8766588b6f3f1789cda9650f43edee51e6d4"
+  },
+  {
+    "file": "assets/favicon.svg",
+    "status": 200,
+    "same_as_local": true,
+    "sha256": "d9245d7d1206578a6001d71a1b1f97b94e5aaecb022c619268be785604608383"
+  },
+  {
+    "file": "assets/site.webmanifest",
+    "status": 200,
+    "same_as_local": true,
+    "sha256": "ede6c1412814fcf78f3b24e3c20a6d85702c28dcbf617f74c4d9fc08c342705f"
+  },
+  {
+    "file": "assets/modal-fractal.svg",
+    "status": 200,
+    "same_as_local": true,
+    "sha256": "17d7005ed283516b541f14668cc3b4bb2f659b849b34de37568484c2081de18c"
+  },
+  {
+    "file": "assets/web-app-manifest-192x192.png",
+    "status": 200,
+    "same_as_local": true,
+    "sha256": "d8ce18ebcfe8dd83617a2a57f56cfbbf5031b640d0f27d42b5cbd826feec34b8"
+  },
+  {
+    "file": "assets/favicon.ico",
+    "status": 200,
+    "same_as_local": true,
+    "sha256": "c9db00e0827b37216acd2bd01fe537cc219d1408dcf6bd7842a94db7e6cfabe0"
+  },
+  {
+    "file": "assets/favicon-96x96.png",
+    "status": 200,
+    "same_as_local": true,
+    "sha256": "2a9ce3cd75e6385d6b02b8cebbc47474790ab8b31cdf27f92e796d7ad5d83e76"
+  },
+  {
+    "file": "assets/apple-touch-icon.png",
+    "status": 200,
+    "same_as_local": true,
+    "sha256": "52f68f2fff91b77d901b14d034b90448a395b9f1571c23f90ae342b251bfdc29"
+  },
+  {
+    "file": "css/theme.css",
+    "status": 200,
+    "same_as_local": true,
+    "sha256": "20bea583106a50569a5b8d21842a3aa27a0e54d57e7326ef8c9c3eded0114cbb"
+  },
+  {
+    "file": "css/styles.css",
+    "status": 200,
+    "same_as_local": false,
+    "sha256": "616f20296c3109b09cc8b69e8165b8240fc3d056fac4fd0a4c8332026eb3b58b"
+  },
+  {
+    "file": "css/modal.css",
+    "status": 200,
+    "same_as_local": true,
+    "sha256": "4958eca5b8d7d01d7412232f2dc93e6e18d43ce6b78eb220ed439b930c8432f3"
+  },
+  {
+    "file": "css/animations.css",
+    "status": 200,
+    "same_as_local": false,
+    "sha256": "ef469b204014ed73ca15aa4310d996debc770b6e2c31aa3ba35edc7aab621f3d"
+  },
+  {
+    "file": "js/storage.js",
+    "status": 200,
+    "same_as_local": true,
+    "sha256": "a85c0e0f77b974bf2dbdc1bef14e82cafeba8f94f638d5415b95839314893b65"
+  },
+  {
+    "file": "js/navigation.js",
+    "status": 200,
+    "same_as_local": true,
+    "sha256": "3ce98291432e3b697eda66a1a99163d7b3b6ca62ac921d703dd0509e5e8e3a25"
+  },
+  {
+    "file": "js/theme.js",
+    "status": 200,
+    "same_as_local": true,
+    "sha256": "41ea20bfb8431ad630662aebd8887658fd30d015be0b0d6f8d4bb1a4b8230684"
+  },
+  {
+    "file": "js/engine.js",
+    "status": 200,
+    "same_as_local": true,
+    "sha256": "8b44f2c24d613288b1174a326f777b4ebb1ea86b019bd0c2530635aaecb2443e"
+  },
+  {
+    "file": "js/tools-menu.js",
+    "status": 200,
+    "same_as_local": false,
+    "sha256": "685837e4cfad816c54d38e56a716fab7bf797ec3e7c451ecdb0f521a50ab2ea8"
+  },
+  {
+    "file": "js/data.js",
+    "status": 200,
+    "same_as_local": true,
+    "sha256": "4d606aff590e867601b6bf81ec74f4f0f8206a66c16274275cc0fc9127605c31"
+  },
+  {
+    "file": "js/assessment.js",
+    "status": 200,
+    "same_as_local": true,
+    "sha256": "c89a84db10aa3331d85da3e8c38ab88b945083058c29b9472df3679b7c9d665f"
+  },
+  {
+    "file": "js/app.js",
+    "status": 200,
+    "same_as_local": false,
+    "sha256": "79ec1ffcde8c151c0034d548cfc716fb44c3be31b3a7d4ecae104b27b0ee8dbc"
+  },
+  {
+    "file": "js/modal.js",
+    "status": 200,
+    "same_as_local": true,
+    "sha256": "7f9f958db43206d084ac7f0b78cf3213a1783a518abd05ba10b6fe0dba80888e"
+  },
+  {
+    "file": "data/maturity.json",
+    "status": 200,
+    "same_as_local": true,
+    "sha256": "f036274b7ac1971f636244596b00cd21bfbda8422dc88ae6c8619a6472f5098d"
+  },
+  {
+    "file": "data/knowledge-map.json",
+    "status": 200,
+    "same_as_local": true,
+    "sha256": "bada29cc7ca81b20a5abae46118ffb512a1e4accfca617aaa2995cfe40d7b277"
+  },
+  {
+    "file": "data/resources.json",
+    "status": 200,
+    "same_as_local": true,
+    "sha256": "3ea4b50b4c0bc5d0ecfe41af5ff9745ae79b21741316f43f0f29893894d6f59d"
+  },
+  {
+    "file": "data/tools.json",
+    "status": 200,
+    "same_as_local": true,
+    "sha256": "3f334a29bc55b51dd7daaa644cf3a59f40db29ee99dbfb30b984607be24ab2ed"
+  },
+  {
+    "file": "data/questions.json",
+    "status": 200,
+    "same_as_local": true,
+    "sha256": "ab61c5f080fdc1df50895b3d3ba5614786dc0fef892b4fda3a67e9073d29ee69"
+  },
+  {
+    "file": "data/dependencies.json",
+    "status": 200,
+    "same_as_local": true,
+    "sha256": "429320ea2693d2b46ba63071bf7cf86326610f0a064006954a3afcfc521bfed6"
+  }
+]

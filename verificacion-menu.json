@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://360diagnostik.netlify.app/",
+    "http": 200,
+    "final_url": "https://360diagnostik.netlify.app/"
+  },
+  {
+    "url": "https://analisisfodak.netlify.app/",
+    "http": 200,
+    "final_url": "https://analisisfodak.netlify.app/"
+  },
+  {
+    "url": "https://productividadyb.netlify.app/",
+    "http": 200,
+    "final_url": "https://productividadyb.netlify.app/"
+  },
+  {
+    "url": "https://fuerzadkar.netlify.app/",
+    "http": 200,
+    "final_url": "https://fuerzadkar.netlify.app/"
+  },
+  {
+    "url": "https://atlasdevaloyb.netlify.app/",
+    "http": 200,
+    "final_url": "https://atlasdevaloyb.netlify.app/"
+  },
+  {
+    "url": "https://impulsov2.netlify.app/",
+    "http": 200,
+    "final_url": "https://impulsov2.netlify.app/"
+  }
+]

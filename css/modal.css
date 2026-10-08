@@ -40,7 +40,7 @@ body.modal-open { overflow: hidden; }
 }
 
 .modal-card .eyebrow {
-  color: #4b760b;
+  color: #486f0b;
 }
 
 .modal-card .tag {
@@ -49,14 +49,14 @@ body.modal-open { overflow: hidden; }
   color: var(--brand-dark);
 }
 
-.modal-card .resource-link { color: #4b760b; }
+.modal-card .resource-link { color: #486f0b; }
 .modal-close { color: var(--brand-dark); }
 .modal-card a:focus-visible,
-.modal-close:focus-visible { outline-color: #4b760b; }
+.modal-close:focus-visible { outline-color: #486f0b; }
 
 .modal-close:hover,
 .modal-close:focus-visible {
-  color: #4b760b;
+  color: #486f0b;
 }
 
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
