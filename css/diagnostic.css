@@ -1,0 +1,24 @@
+[hidden]{display:none!important}
+#storageStatus{margin:10px auto;max-width:1180px;padding:0 24px;overflow-wrap:anywhere;color:var(--muted)}
+#storageStatus[data-error="true"]{color:#ffb4a8}:root[data-theme="light"] #storageStatus[data-error="true"]{color:#963126}
+.counter{max-width:180px;text-align:right}.counter strong{font-size:15px}
+.rail-item{width:100%;text-align:left;color:var(--text);font:inherit;background:transparent;cursor:pointer}
+#assessmentStage h2:focus,#questionText:focus{outline:2px solid var(--accent);outline-offset:6px}
+#assessmentStage p,.recommendation p,#reportPreview p{white-space:pre-wrap;overflow-wrap:anywhere}
+.question-area,.question-card,.assessment-side,.knowledge-card,.road-step{min-width:0}
+.question-nav,.actions{flex-wrap:wrap}
+#answerNote,input,textarea,select{max-width:100%}
+input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.history-card,.review-block,.recommendation,.action-editor{border:1px solid var(--line);border-radius:16px;padding:18px;margin:16px 0;background:var(--panel);overflow-wrap:anywhere}
+.review-answer{display:block;width:100%;text-align:left;border:1px solid var(--line);padding:12px;margin:8px 0;border-radius:10px;background:var(--panel2);color:var(--text);font:inherit}
+.review-answer small{display:block;white-space:pre-wrap}
+.action-editor{display:grid;gap:12px}.action-editor label{display:grid;gap:5px}
+.action-editor input,.action-editor textarea,.action-editor select{font:inherit;padding:10px;background:var(--field-bg);color:var(--text);border:1px solid var(--line);border-radius:8px}
+.import-label{display:inline-flex;gap:10px;align-items:center;flex-wrap:wrap}.import-label input{width:220px}
+.result-item b{white-space:normal;text-align:right}.result-item{align-items:center}
+#bars .bar-row{grid-template-columns:minmax(100px,150px) minmax(0,1fr) minmax(95px,130px)}#bars .bar-row b{font-size:12px;text-align:right}
+@media(max-width:580px){#bars .bar-row{grid-template-columns:minmax(64px,90px) minmax(0,1fr) 92px}.counter{max-width:120px}.history-card,.review-block,.recommendation{padding:14px}.question-nav button,.question-area>.actions button{flex:1 1 130px}.action-plan{min-width:0}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+.history-card pre{white-space:pre-wrap;overflow-wrap:anywhere;max-width:100%;font-size:12px}
+#savedState{display:block;max-width:65ch;overflow-wrap:anywhere}.recommendation button{white-space:normal;text-align:left;overflow-wrap:anywhere}

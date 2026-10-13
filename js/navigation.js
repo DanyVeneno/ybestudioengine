@@ -1,1 +1,7 @@
-export function showView(id){document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===id));document.querySelectorAll('[data-nav]').forEach(b=>b.classList.toggle('active',b.dataset.nav===id));const heading=document.querySelector(`#${id} h1, #${id} h2`);if(heading){heading.setAttribute('tabindex','-1');heading.focus({preventScroll:true})}window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}
+export function showView(id,{scroll=true}={}) {
+  document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===id));
+  document.querySelectorAll('[data-nav]').forEach(b=>b.classList.toggle('active',b.dataset.nav===id));
+  const heading=document.querySelector('#'+id+' h1, #'+id+' h2');
+  if(heading){heading.setAttribute('tabindex','-1');heading.focus({preventScroll:true});}
+  if(scroll)window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+}

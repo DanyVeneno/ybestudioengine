@@ -39,6 +39,7 @@
         <span data-theme-label>Oscuro</span>
       </button>
     </header>
+    <p id="storageStatus" role="status" aria-live="polite"></p>
     <main id="app">
       <section class="view active hero" id="home">
         <div class="hero-copy reveal">
@@ -56,7 +57,7 @@
             una ruta de transformación con sentido para cada organización.
           </p>
           <div class="actions">
-            <button class="primary" data-nav="context">
+            <button class="primary" id="startAssessment">
               Iniciar diagnóstico →
             </button>
             <button class="secondary" data-nav="needs">¿Qué necesitas?</button>
@@ -64,6 +65,7 @@
               Explorar ecosistema
             </button>
           </div>
+          <div class="actions"><button class="secondary" id="resumeAssessment" hidden>Reanudar borrador</button><button class="ghost" data-nav="history">Diagnósticos anteriores / importar</button></div>
           <div class="flowline">
             <span>01 Entender</span>
             <span>02 Diagnosticar</span>
@@ -91,6 +93,7 @@
           <p class="orbit-note">8 dimensiones · un solo ecosistema</p>
         </div>
       </section>
+      <section class="view panel" id="history"><div class="section-head"><h2>Mis diagnósticos locales</h2><p>Este navegador conserva tus diagnósticos. Exporta una copia para respaldarlos. No hay sincronización ni seguimiento remoto.</p></div><div class="actions"><button class="primary" id="newAssessment">Crear nuevo diagnóstico</button><label class="secondary import-label">Importar JSON<input type="file" id="importDiagnostic" accept=".json,application/json"></label></div><div class="actions"><button class="secondary" data-export-draft>Exportar trabajo de esta pestaña</button></div><p id="importStatus" role="status"></p><div id="assessmentHistory"></div></section>
       <section class="view panel" id="needs">
         <div class="section-head reveal">
           <p class="eyebrow">PUNTO DE ENTRADA</p>
@@ -119,7 +122,7 @@
         <div class="context-grid">
           <label class="context-field">
             <span>Nombre del negocio <small>(opcional)</small></span>
-            <input id="businessName" type="text" placeholder="Ej. Mi empresa" />
+            <input id="businessName" maxlength="5000" type="text" placeholder="Ej. Mi empresa" />
           </label>
           <label class="context-field">
             <span>Tipo de organización</span>
@@ -156,7 +159,7 @@
           <label class="context-field wide">
             <span>¿Cuál es hoy tu principal reto?</span>
             <textarea
-              id="businessChallenge"
+              id="businessChallenge" maxlength="5000"
               rows="4"
               placeholder="Ej. tenemos procesos manuales, el sitio no genera clientes, usamos sistemas separados..."
             ></textarea>
@@ -164,6 +167,7 @@
         </div>
         <div class="section-actions">
           <button class="secondary" data-nav="needs">← Definir objetivo</button>
+          <button class="secondary" data-export-draft>Exportar borrador JSON</button><button class="secondary" id="contextSaveExit">Guardar y salir</button>
           <button class="primary" id="contextContinue">
             Comenzar las 40 preguntas →
           </button>
@@ -185,34 +189,33 @@
             </p>
             <div id="dimensionRail" class="dimension-rail"></div>
             <button class="ghost small" id="resetAssessment">
-              Reiniciar diagnóstico
+              Crear nuevo diagnóstico
             </button>
           </aside>
           <div class="question-area">
             <div class="question-meta">
               <div>
                 <p class="eyebrow" id="dimensionLabel"></p>
-                <span id="savedState">Progreso guardado localmente</span>
+                <span id="savedState">Guardado pendiente</span>
               </div>
               <div class="counter">
-                <strong id="counter">1</strong>
-                <small>/40</small>
+                <strong id="counter">Pregunta 1 de 40</strong>
               </div>
             </div>
-            <div class="progress">
+            <p id="progressLabel" role="status">0/40 respondidas</p><div class="progress" id="progressTrack" role="progressbar" aria-label="Respuestas registradas" aria-valuemin="0" aria-valuemax="40" aria-valuenow="0">
               <i id="progress"></i>
             </div>
-            <div id="questionCard" class="question-card">
+            <div id="assessmentStage" class="question-card" hidden></div><div id="questionFlow"><div id="questionCard" class="question-card">
               <h2 id="questionText" aria-live="polite"></h2>
               <p class="hint">
                 Selecciona el nivel que mejor representa tu organización.
               </p>
-              <div id="answers" class="answers" role="group" aria-label="Nivel de madurez"></div>
+              <p id="questionExplanation"></p><p id="questionExample" class="hint"></p><div id="answers" class="answers" role="group" aria-label="Nivel de madurez"></div><label class="context-field"><span>Nota o evidencia opcional (no verificada)</span><textarea id="answerNote" rows="3" maxlength="5000"></textarea></label>
             </div>
             <div class="question-nav">
               <button class="secondary" id="back">← Anterior</button>
               <button class="primary" id="next" disabled>Siguiente →</button>
-            </div>
+            </div></div><div class="actions"><button class="secondary" id="reviewAssessment">Revisar las 40 respuestas</button><button class="secondary" data-export-draft>Exportar borrador JSON</button><button class="ghost" id="saveExit">Guardar y salir</button></div>
           </div>
         </div>
       </section>
@@ -236,9 +239,9 @@
             <div id="bars" class="bars"></div>
           </article>
         </div>
-        <p id="tieNote" class="method-note"></p><div class="result-grid">
+        <p id="resultCoverage"></p><div class="actions"><button class="secondary" id="editAssessment">Revisar / editar (crea copia si está cerrado)</button></div><p id="tieNote" class="method-note"></p><div class="result-grid">
           <article>
-            <p class="eyebrow">MAYORES PUNTUACIONES</p>
+            <p class="eyebrow">CAPACIDADES RELATIVAMENTE MEJOR EVALUADAS</p>
             <div id="strengths"></div>
           </article>
           <article>
@@ -272,12 +275,12 @@
           </div>
           <div id="roadmap" class="roadmap"></div>
         </div>
-        <section class="report-actions" aria-label="Reporte del diagnóstico"><h2>Tu reporte</h2><p>Autoevaluación orientativa. Puedes revisar el reporte, guardarlo como PDF desde imprimir o descargar sus datos.</p><div class="actions"><button class="secondary" id="previewReport" aria-expanded="false" aria-controls="reportPreview">Ver reporte</button><button class="secondary" id="printReport">Imprimir / guardar PDF</button><button class="secondary" id="exportReport">Descargar datos JSON</button></div></section><section id="reportPreview" hidden aria-label="Reporte detallado"></section><div class="cta">
+        <section class="action-plan"><h2>Acciones elegidas</h2><p>Responsable y fecha son opcionales. Editar un diagnóstico cerrado crea una copia y conserva el original.</p><div id="selectedActions"></div></section><section class="report-actions" aria-label="Reporte del diagnóstico"><h2>Tu reporte</h2><p>Autoevaluación orientativa. Puedes revisar el reporte, guardarlo como PDF desde imprimir o descargar sus datos.</p><div class="actions"><button class="secondary" id="previewReport" aria-expanded="false" aria-controls="reportPreview">Ver reporte</button><button class="secondary" id="printReport">Imprimir / guardar PDF</button><button class="secondary" id="exportReport">Descargar datos JSON</button></div></section><section id="reportPreview" hidden aria-label="Reporte detallado"></section><div class="cta">
           <div>
             <p class="eyebrow">SIGUIENTE PASO</p>
             <h2>Convierte el diagnóstico en un plan.</h2>
             <p>
-              Comparte el resultado y profundiza las prioridades detectadas.
+              Puedes abrir WhatsApp para escribir sobre los siguientes pasos. Las respuestas no se comparten automáticamente.
             </p>
           </div>
           <a
@@ -312,6 +315,6 @@
       YEHIIBHII ESTUDIO · Entender → Diagnosticar → Priorizar → Conectar →
       Actuar
     </footer>
-    <link rel="stylesheet" href="css/revision.css"><link rel="stylesheet" href="css/report.css"><script type="module" src="js/app.js"></script>
+    <link rel="stylesheet" href="css/diagnostic.css"><link rel="stylesheet" href="css/revision.css"><link rel="stylesheet" href="css/report.css"><script type="module" src="js/app.js"></script>
   </body>
 </html>

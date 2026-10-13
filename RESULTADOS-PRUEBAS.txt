@@ -1,9 +1,10 @@
-PASS: editar respuesta actualiza resultado y estado persistido sin finalizar
-PASS: diagnóstico incompleto invalida resultado
-PASS: valores fuera de niveles no generan resultado
-PASS: cancelar conserva respuestas; confirmar reinicia y deshabilita resultado
-PASS: recorrido completo 40 preguntas al nivel 25
-PASS: recorrido completo 40 preguntas al nivel 50
-PASS: recorrido completo 40 preguntas al nivel 75
-PASS: recorrido completo 40 preguntas al nivel 100
-PASS: reporte estructurado con 40 respuestas y 8 dimensiones
+YBESTUDIO · 12 de octubre de 2026 (America/Mexico_City)
+node tests/regression.cjs: PASS, 22 grupos (lógica, persistencia, seguridad de textos y recorrido con DOM simulado).
+node --check: PASS para los 10 módulos JS.
+HTMLParser: PASS, etiquetas balanceadas e IDs únicos.
+HTTP local: 200 para / y /data/questions.json.
+git diff --check: PASS; avisos LF/CRLF sin errores.
+Verificación visual: NO EJECUTADA. Chrome timeout; iab no disponible; inventario CUA sin navegadores.
+Impresión: controlador invoca window.print(); descarga PDF y paginación reales NO verificadas.
+Despliegue: NO ejecutado. Sin workflows o scripts de despliegue en repositorio.
+Pruebas, comandos exactos, migración y pendientes: CONTINUIDAD.md.
