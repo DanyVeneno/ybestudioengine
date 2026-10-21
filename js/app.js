@@ -295,7 +295,7 @@ function openToolModal(tool) {
 
 async function init(){
   try{
-    try{library=load();state=clone(library.assessments.find(s=>s.assessmentId===library.activeId)||null);announce('Biblioteca local cargada.');}
+    try{library=load();state=clone(library.assessments.find(s=>s.assessmentId===library.activeId)||null);}
     catch{storageBlocked=true;announce('No se pudo leer o migrar el almacenamiento. Los datos existentes se conservan. Exporta el trabajo de esta pestaña antes de cerrarla.',true);}
     const [raw,k,d,m,r,tools]=await Promise.all([get('./data/questions.json'),get('./data/knowledge-map.json'),get('./data/dependencies.json'),get('./data/maturity.json'),get('./data/resources.json'),get('./data/tools.json')]);
     questions=normalizeAssessment(raw);knowledge=k;deps=d;maturity=m;resources=r;dims=[...new Set(questions.map(q=>q.dimension))];
